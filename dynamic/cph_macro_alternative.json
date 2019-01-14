@@ -1,0 +1,205 @@
+{
+    "Detect /check, issue /3": {
+        "auto_encode": false,
+        "extract_choice_index": 0,
+        "single_request": "GET /3/123 HTTP/1.1\r\nHost: 127.0.0.1:9001\r\n\r\n",
+        "enable_forwarder": false,
+        "indices_choice_index": 0,
+        "cached_expression": [
+            true,
+            ""
+        ],
+        "enabled": true,
+        "modify_type_choice_index": 0,
+        "issuer": [
+            false,
+            "127.0.0.1",
+            9001
+        ],
+        "single_expression": [
+            true,
+            "(?P<number>\\d{1,5})$"
+        ],
+        "macro_expression": [
+            true,
+            ""
+        ],
+        "modify_expression": [
+            false,
+            "GET /check"
+        ],
+        "forwarder": [
+            false,
+            "host",
+            80
+        ],
+        "single_response": " \r\n \r\n \r\n \r\n \r\n \r\n",
+        "dynamic_checkbox": true,
+        "modify_scope_choice_index": 1,
+        "match_expression": [
+            true,
+            "(GET /check/)\\d{1,5}"
+        ],
+        "static_expression": [
+            true,
+            "\\g<1>\\g<number>"
+        ],
+        "match_indices": "0",
+        "cached_selection": null
+    },
+    "Detect /3, issue /2": {
+        "auto_encode": false,
+        "extract_choice_index": 0,
+        "single_request": "GET /2/123 HTTP/1.1\r\nHost: 127.0.0.1:9001\r\n\r\n",
+        "enable_forwarder": false,
+        "indices_choice_index": 0,
+        "cached_expression": [
+            true,
+            ""
+        ],
+        "enabled": true,
+        "modify_type_choice_index": 0,
+        "issuer": [
+            false,
+            "127.0.0.1",
+            9001
+        ],
+        "single_expression": [
+            true,
+            "(?P<number>\\d{1,5})$"
+        ],
+        "macro_expression": [
+            true,
+            ""
+        ],
+        "modify_expression": [
+            false,
+            "GET /3"
+        ],
+        "forwarder": [
+            false,
+            "host",
+            80
+        ],
+        "single_response": " \r\n \r\n \r\n \r\n \r\n \r\n",
+        "dynamic_checkbox": true,
+        "modify_scope_choice_index": 1,
+        "match_expression": [
+            true,
+            "(GET /3/)\\d{1,5}"
+        ],
+        "static_expression": [
+            true,
+            "\\g<1>\\g<number>"
+        ],
+        "match_indices": "0",
+        "cached_selection": null
+    },
+    "Detect /2, issue /1": {
+        "auto_encode": false,
+        "extract_choice_index": 0,
+        "single_request": "GET /1/123 HTTP/1.1\r\nHost: 127.0.0.1:9001\r\n\r\n",
+        "enable_forwarder": false,
+        "indices_choice_index": 0,
+        "cached_expression": [
+            true,
+            ""
+        ],
+        "enabled": true,
+        "modify_type_choice_index": 0,
+        "issuer": [
+            false,
+            "127.0.0.1",
+            9001
+        ],
+        "single_expression": [
+            true,
+            "(?P<number>\\d{1,5})$"
+        ],
+        "macro_expression": [
+            true,
+            ""
+        ],
+        "modify_expression": [
+            false,
+            "GET /2"
+        ],
+        "forwarder": [
+            false,
+            "host",
+            80
+        ],
+        "single_response": " \r\n \r\n \r\n \r\n \r\n \r\n",
+        "dynamic_checkbox": true,
+        "modify_scope_choice_index": 1,
+        "match_expression": [
+            true,
+            "(GET /2/)\\d{1,5}"
+        ],
+        "static_expression": [
+            true,
+            "\\g<1>\\g<number>"
+        ],
+        "match_indices": "0",
+        "cached_selection": null
+    },
+    "Detect /1, issue /number": {
+        "auto_encode": false,
+        "extract_choice_index": 0,
+        "single_request": "GET /number HTTP/1.1\r\nHost: 127.0.0.1:9001\r\n\r\n",
+        "enable_forwarder": false,
+        "indices_choice_index": 0,
+        "cached_expression": [
+            true,
+            ""
+        ],
+        "enabled": true,
+        "modify_type_choice_index": 0,
+        "issuer": [
+            false,
+            "127.0.0.1",
+            9001
+        ],
+        "single_expression": [
+            true,
+            "(?P<number>\\d{1,5})$"
+        ],
+        "macro_expression": [
+            true,
+            ""
+        ],
+        "modify_expression": [
+            false,
+            "GET /1"
+        ],
+        "forwarder": [
+            false,
+            "host",
+            80
+        ],
+        "single_response": " \r\n \r\n \r\n \r\n \r\n \r\n",
+        "dynamic_checkbox": true,
+        "modify_scope_choice_index": 1,
+        "match_expression": [
+            true,
+            "(GET /1/)\\d{1,5}"
+        ],
+        "static_expression": [
+            true,
+            "\\g<1>\\g<number>"
+        ],
+        "match_indices": "0",
+        "cached_selection": null
+    },
+    "a793ab8fcc2afce5e42b3044090719ddaff19741697d93b3b7f36838dd5e825c": {
+        "chkbox_repeater": true,
+        "chkbox_scanner": false,
+        "chkbox_extender": true,
+        "chkbox_spider": false,
+        "chkbox_intruder": false,
+        "chkbox_sequencer": false,
+        "chkbox_target": false,
+        "verbosity": 3,
+        "chkbox_proxy": true
+    }
+}

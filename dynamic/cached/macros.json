@@ -1,0 +1,60 @@
+{
+    "project_options":{
+        "sessions":{
+            "macros":{
+                "macros":[
+                    {
+                        "description":"Get numbers",
+                        "items":[
+                            {
+                                "accept_response_cookies":false,
+                                "custom_parameters":[],
+                                "method":"GET",
+                                "request":"GET /number HTTP/1.1\r\nHost: 127.0.0.1:9001\r\n\r\n",
+                                "request_parameters":[],
+                                "response":"",
+                                "status_code":200,
+                                "url":"http://127.0.0.1:9001/number",
+                                "use_request_cookies":false
+                            },
+                            {
+                                "accept_response_cookies":false,
+                                "custom_parameters":[],
+                                "method":"GET",
+                                "request":"GET /1/123 HTTP/1.1\r\nHost: 127.0.0.1:9001\r\n\r\n",
+                                "request_parameters":[],
+                                "response":"",
+                                "status_code":200,
+                                "url":"http://127.0.0.1:9001/1/123",
+                                "use_request_cookies":false
+                            },
+                            {
+                                "accept_response_cookies":false,
+                                "custom_parameters":[],
+                                "method":"GET",
+                                "request":"GET /2/123 HTTP/1.1\r\nHost: 127.0.0.1:9001\r\n\r\n",
+                                "request_parameters":[],
+                                "response":"",
+                                "status_code":200,
+                                "url":"http://127.0.0.1:9001/2/123",
+                                "use_request_cookies":false
+                            },
+                            {
+                                "accept_response_cookies":false,
+                                "custom_parameters":[],
+                                "method":"GET",
+                                "request":"GET /3/123 HTTP/1.1\r\nHost: 127.0.0.1:9001\r\n\r\n",
+                                "request_parameters":[],
+                                "response":"",
+                                "status_code":200,
+                                "url":"http://127.0.0.1:9001/3/123",
+                                "use_request_cookies":false
+                            }
+                        ],
+                        "serial_number":1467560553336309760
+                    }
+                ]
+            }
+        }
+    }
+}

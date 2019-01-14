@@ -1,24 +1,24 @@
 {
-    "Dynamic request with named group": {
+    "Lookbehind assertion": {
         "auto_encode": false,
         "extract_choice_index": 0,
-        "single_request": "GET /number HTTP/1.1\r\nHost: 127.0.0.1:9001\r\nConnection: close\r\n\r\n",
+        "single_request": "",
         "enable_forwarder": false,
-        "indices_choice_index": 0,
+        "indices_choice_index": 1,
         "cached_expression": [
             true,
             ""
         ],
         "enabled": true,
-        "modify_type_choice_index": 0,
+        "modify_type_choice_index": 1,
         "issuer": [
             false,
-            "127.0.0.1",
-            9001
+            "host",
+            80
         ],
         "single_expression": [
             true,
-            "(?P<number>\\d{1,5})$"
+            ""
         ],
         "macro_expression": [
             true,
@@ -26,7 +26,7 @@
         ],
         "modify_expression": [
             false,
-            "GET /1"
+            ""
         ],
         "forwarder": [
             false,
@@ -34,17 +34,17 @@
             80
         ],
         "single_response": " \r\n \r\n \r\n \r\n \r\n \r\n",
-        "dynamic_checkbox": true,
-        "modify_scope_choice_index": 1,
+        "dynamic_checkbox": false,
+        "modify_scope_choice_index": 0,
         "match_expression": [
             true,
-            "/1/?\\d{0,5}"
+            "(?<=00000)\\d{5}"
         ],
         "static_expression": [
             true,
-            "/1/\\g<number>"
+            "*****"
         ],
-        "match_indices": "0",
+        "match_indices": "0:-1,-1",
         "cached_selection": null
     },
     "a793ab8fcc2afce5e42b3044090719ddaff19741697d93b3b7f36838dd5e825c": {

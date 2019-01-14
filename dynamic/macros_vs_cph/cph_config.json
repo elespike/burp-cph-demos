@@ -1,10 +1,10 @@
 {
-    "Dynamic request with named group": {
+    "POST /number": {
         "auto_encode": false,
         "extract_choice_index": 0,
-        "single_request": "GET /number HTTP/1.1\r\nHost: 127.0.0.1:9001\r\nConnection: close\r\n\r\n",
+        "single_request": "GET /number HTTP/1.1\r\nHost: 127.0.0.1:9001\r\n\r\n",
         "enable_forwarder": false,
-        "indices_choice_index": 0,
+        "indices_choice_index": 1,
         "cached_expression": [
             true,
             ""
@@ -26,7 +26,7 @@
         ],
         "modify_expression": [
             false,
-            "GET /1"
+            "POST /number"
         ],
         "forwarder": [
             false,
@@ -38,13 +38,13 @@
         "modify_scope_choice_index": 1,
         "match_expression": [
             true,
-            "/1/?\\d{0,5}"
+            "(?mx)          # multiline and verbose flags\n(?<=^Cookie: ) # must be preceded by \"Cookie\" at the beginning of the line\n(.*number=)    # find the \"number\" cookie, in case there are others; this is group 1\n\\d{1,5}        # find its value\n(.*)$          # match the rest of the line; this is group 2"
         ],
         "static_expression": [
             true,
-            "/1/\\g<number>"
+            "\\g<1>\\g<number>\\g<2>"
         ],
-        "match_indices": "0",
+        "match_indices": "0:-1,-1",
         "cached_selection": null
     },
     "a793ab8fcc2afce5e42b3044090719ddaff19741697d93b3b7f36838dd5e825c": {

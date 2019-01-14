@@ -1,8 +1,8 @@
 {
-    "Dynamic request with named group": {
+    "GET /check": {
         "auto_encode": false,
-        "extract_choice_index": 0,
-        "single_request": "GET /number HTTP/1.1\r\nHost: 127.0.0.1:9001\r\nConnection: close\r\n\r\n",
+        "extract_choice_index": 1,
+        "single_request": "",
         "enable_forwarder": false,
         "indices_choice_index": 0,
         "cached_expression": [
@@ -13,20 +13,20 @@
         "modify_type_choice_index": 0,
         "issuer": [
             false,
-            "127.0.0.1",
-            9001
+            "host",
+            80
         ],
         "single_expression": [
             true,
-            "(?P<number>\\d{1,5})$"
+            ""
         ],
         "macro_expression": [
             true,
-            ""
+            "(?P<number>\\d{1,5})$"
         ],
         "modify_expression": [
             false,
-            "GET /1"
+            "GET /check"
         ],
         "forwarder": [
             false,
@@ -38,11 +38,11 @@
         "modify_scope_choice_index": 1,
         "match_expression": [
             true,
-            "/1/?\\d{0,5}"
+            "(GET /check/)\\d{1,5}"
         ],
         "static_expression": [
             true,
-            "/1/\\g<number>"
+            "\\g<1>\\g<number>"
         ],
         "match_indices": "0",
         "cached_selection": null
