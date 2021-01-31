@@ -41,7 +41,7 @@
             "[ ]"
         ],
         "static_expression": [
-            true,
+            false,
             "[X]"
         ],
         "match_indices": "0,4,-1",
