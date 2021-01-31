@@ -41,7 +41,7 @@
             "Yoda!"
         ],
         "static_expression": [
-            true,
+            false,
             "Mr. Mackey, m'kay?"
         ],
         "match_indices": "0",
